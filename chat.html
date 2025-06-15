@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chat App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="chat-body">
+  <button id="homeButton" style="position: absolute; top: 20px; left: 20px; padding: 8px 12px; border-radius: 5px; border:none; cursor:pointer;">Home</button>
+  <button id="themeToggle">Toggle Theme</button>
+
+  <div class="chat-container">
+    <div id="chat-box" class="chat-box"></div>
+
+    <div class="emoji-picker">
+      <span>😀</span> <span>😍</span> <span>😂</span> <span>🤔</span>
+      <span>😎</span> <span>😢</span> <span>👋</span> <span>🎉</span>
+    </div>
+
+    <div class="input-area">
+      <input type="text" id="messageInput" placeholder="Type a message..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <div class="controls">
+      <button onclick="clearChat()">Clear Chat</button>
+      <button onclick="downloadChat()">Download Chat</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Back button event listener
+    document.getElementById("backHome").addEventListener("click", () => {
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>
